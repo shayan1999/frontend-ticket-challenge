@@ -10,7 +10,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
-    "typescript": "~6.0.3"
+    "typescript": "catalog:"
   },
   "extends": "../../tsconfig.base.json"
 }

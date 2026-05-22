@@ -12,14 +12,14 @@
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@ticket/shared-types": "workspace:*",
-    "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "cors": "catalog:",
+    "express": "catalog:"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/node": "^24.12.4",
-    "tsx": "^4.22.3",
-    "typescript": "^6.0.3"
+    "@types/cors": "catalog:",
+    "@types/express": "catalog:",
+    "@types/node": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   }
 }
