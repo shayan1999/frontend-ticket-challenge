@@ -24,6 +24,14 @@ catalog:
   react: ^19.2.6
   react-dom: ^19.2.6
   tsx: ^4.22.3
-  typescript: ~6.0.3
+  typescript: ^5.9.3
   typescript-eslint: ^8.59.2
   vite: ^8.0.12
+  "@tanstack/react-query": ^5.100.11
+  react-router-dom: ^7.15.1
+  react-window: ^2.2.7
+  zod: ^4.4.3
+  "@tailwindcss/vite": ^4.3.0
+  "tailwindcss": ^4.3.0
+  "react-error-boundary": ^6.1.1
+  "vite-tsconfig-paths": ^6.1.1
