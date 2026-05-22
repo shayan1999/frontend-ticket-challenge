@@ -1,17 +1,16 @@
 {
   "name": "@ticket/shared-types",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "A private repo for managing shared types between our projects",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "private": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
-    "typescript": "~6.0.3"
+    "typescript": "catalog:"
   },
   "extends": "../../tsconfig.base.json"
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:web": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "biome:check": "biome check .",
@@ -19,10 +20,10 @@
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
-    "@biomejs/biome": "^2.4.15",
-    "@commitlint/cli": "^21.0.1",
-    "@commitlint/config-conventional": "^21.0.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.0.5"
+    "@biomejs/biome": "catalog:",
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:"
   }
 }
