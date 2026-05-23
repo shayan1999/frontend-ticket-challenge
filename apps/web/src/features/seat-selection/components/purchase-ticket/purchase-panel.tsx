@@ -8,9 +8,11 @@ export function PurchasePanel() {
     const selectedSeat = useSeatMapStore((state) => state.selectedSeat)
     const setSelectSeat = useSeatMapStore((state) => state.setSelectedSeat)
     return (
-        <Card title="Selected seat" className="h-full">
+        <Card.Root className="h-full">
+            <Card.Title>Selected seat</Card.Title>
+
             {selectedSeat ? (
-                <div className="flex h-full flex-col justify-between gap-2">
+                <Card.Content className="h-full justify-between">
                     <div className="flex flex-row items-center justify-around gap-2">
                         <span>
                             <b>column:</b> {selectedSeat.x + 1}
@@ -22,20 +24,24 @@ export function PurchasePanel() {
                             <b>cost:</b> 1$
                         </span>
                     </div>
-                    <div className="flex w-fit flex-row items-center gap-2 rounded p-1 px-2">
-                        <CircleAlert className="text-warning" />{" "}
-                        <p className="text-warning">Check your seat location before processed.</p>
+                    <div className="flex flex-col gap-2">
+                        <div className="flex w-fit flex-row items-center gap-2 rounded p-1 px-2">
+                            <CircleAlert className="text-warning" />{" "}
+                            <p className="text-warning">Check your seat location before processed.</p>
+                        </div>
+                        <div className="flex w-full flex-row items-center justify-end gap-2">
+                            <Button onClick={() => setSelectSeat(null)} variant="secondary" className="flex-1">
+                                Cancel
+                            </Button>
+                            <PurchaseConfirmationDialog trigger={<Button className="flex-1">Purchase</Button>} />
+                        </div>
                     </div>
-                    <div className="flex w-full flex-row items-center justify-end gap-2">
-                        <Button onClick={() => setSelectSeat(null)} variant="secondary" className="flex-1">
-                            Cancel
-                        </Button>
-                        <PurchaseConfirmationDialog trigger={<Button className="flex-1">Purchase</Button>} />
-                    </div>
-                </div>
+                </Card.Content>
             ) : (
-                <p>Please select a seat from the seats map</p>
+                <Card.Content>
+                    <p>Please select a seat from the seats map</p>
+                </Card.Content>
             )}
-        </Card>
+        </Card.Root>
     )
 }
