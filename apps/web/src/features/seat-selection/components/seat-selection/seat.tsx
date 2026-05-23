@@ -1,5 +1,5 @@
 import { cn } from "@/shared/lib/cn"
-import { useSeatMetrics } from "../hooks/use-seat-metrics"
+import { useSeatMetrics } from "../../hooks/use-seat-metrics"
 
 type SeatProps = {
     reserved: boolean

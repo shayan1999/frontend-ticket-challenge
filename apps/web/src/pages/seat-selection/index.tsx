@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import { useSeatMapQuery } from "@/features/seat-selection/api/use-seat-map-query"
-import { SeatMapPageLayout } from "@/features/seat-selection/components/seat-map-page-layout"
+import { SeatMapPageLayout } from "@/features/seat-selection/components/seat-selection/seat-map-page-layout"
 import { Card } from "@/shared/components/card"
 import { ErrorMessage } from "@/shared/components/error-message"
 import { Spinner } from "@/shared/components/spinner"

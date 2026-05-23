@@ -3,7 +3,7 @@ import { XIcon } from "lucide-react"
 import { type ReactNode, useState } from "react"
 import { useLoaderData } from "react-router-dom"
 import { Button } from "@/shared/components/button"
-import { useConfirmSeatPurchase } from "../hooks/use-confirm-seat-purchase"
+import { useConfirmSeatPurchase } from "../../hooks/use-confirm-seat-purchase"
 
 interface Props {
     trigger: ReactNode

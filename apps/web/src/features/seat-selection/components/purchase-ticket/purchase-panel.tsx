@@ -1,7 +1,7 @@
 import { CircleAlert } from "lucide-react"
 import { Button } from "@/shared/components/button"
 import { Card } from "@/shared/components/card"
-import { useSeatMapStore } from "../store/use-seat-map-store"
+import { useSeatMapStore } from "../../store/use-seat-map-store"
 import { PurchaseConfirmationDialog } from "./purchase-confirmation-dialog"
 
 export function PurchasePanel() {

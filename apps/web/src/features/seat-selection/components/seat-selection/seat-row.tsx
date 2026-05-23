@@ -1,6 +1,6 @@
 import { memo } from "react"
-import { useSeatMetrics } from "../hooks/use-seat-metrics"
-import { useSeatMapStore } from "../store/use-seat-map-store"
+import { useSeatMetrics } from "../../hooks/use-seat-metrics"
+import { useSeatMapStore } from "../../store/use-seat-map-store"
 import { Seat } from "./seat"
 
 type SeatRowProps = {

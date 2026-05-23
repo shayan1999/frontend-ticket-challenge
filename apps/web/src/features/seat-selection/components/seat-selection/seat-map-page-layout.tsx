@@ -1,7 +1,7 @@
 import { AppLayout } from "@/shared/components/app-layout"
 
-import { MapDetails } from "./map-details"
-import { PurchasePanel } from "./purchase-panel"
+import { MapDetails } from "../map-details"
+import { PurchasePanel } from "../purchase-ticket/purchase-panel"
 import { SeatMap } from "./seat-map"
 
 type SeatMapPageLayoutProps = {
