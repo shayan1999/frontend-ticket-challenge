@@ -6,6 +6,7 @@
   "scripts": {
     "dev:web": "pnpm --filter web dev",
     "dev:api": "pnpm --filter api dev",
+    "dev": "concurrently \"pnpm dev:web\" \"pnpm dev:api\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "biome:check": "biome check .",
@@ -20,10 +21,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
-    "@biomejs/biome": "catalog:",
-    "@commitlint/cli": "catalog:",
-    "@commitlint/config-conventional": "catalog:",
-    "husky": "catalog:",
-    "lint-staged": "catalog:"
+    "@biomejs/biome": "catalog:linting",
+    "@commitlint/cli": "catalog:linting",
+    "@commitlint/config-conventional": "catalog:linting",
+    "concurrently": "catalog:tooling",
+    "husky": "catalog:linting",
+    "lint-staged": "catalog:linting"
   }
 }

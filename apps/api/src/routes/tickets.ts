@@ -19,6 +19,11 @@ router.post("/:id/ticket", (req, res) => {
             message: "Seat already reserved",
         })
     }
+    if (Math.random() < 0.2) {
+        return res.status(409).json({
+            message: "Seat already reserved (random error)",
+        })
+    }
 
     map[y][x] = 1
 

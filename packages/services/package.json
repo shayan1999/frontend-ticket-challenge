@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ticket/shared-types": "workspace:*",
-    "zod": "catalog:"
+    "zod": "catalog:frontend"
   },
   "keywords": [],
   "author": "",
