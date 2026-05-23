@@ -1,6 +1,8 @@
 import type { ReactNode } from "react"
 import { cn } from "@/shared/lib/cn"
+import { Content as CardContent } from "./content"
 import { Root as CardRoot } from "./root"
+import { Skeleton as CardSkeleton } from "./skeleton"
 import { Title as CardTitle } from "./title"
 
 export function Card({ children, title, className }: Card.Props) {
@@ -15,6 +17,8 @@ export function Card({ children, title, className }: Card.Props) {
 export namespace Card {
     export const Root = CardRoot
     export const Title = CardTitle
+    export const Skeleton = CardSkeleton
+    export const Content = CardContent
     export type Props = {
         title?: string
         children?: ReactNode
