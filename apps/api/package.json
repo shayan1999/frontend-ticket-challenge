@@ -12,14 +12,14 @@
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@ticket/shared-types": "workspace:*",
-    "cors": "catalog:",
-    "express": "catalog:"
+    "cors": "catalog:backend",
+    "express": "catalog:backend"
   },
   "devDependencies": {
-    "@types/cors": "catalog:",
-    "@types/express": "catalog:",
-    "@types/node": "catalog:",
-    "tsx": "catalog:",
-    "typescript": "catalog:"
+    "@types/cors": "catalog:types",
+    "@types/express": "catalog:types",
+    "@types/node": "catalog:types",
+    "tsx": "catalog:tooling",
+    "typescript": "catalog:tooling"
   }
 }

@@ -9,24 +9,35 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "catalog:",
-    "@tanstack/react-query": "catalog:",
+    "@radix-ui/react-dialog": "catalog:ui",
+    "@tailwindcss/vite": "catalog:ui",
+    "@tanstack/react-query": "catalog:frontend",
     "@ticket/services": "workspace:*",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "react-error-boundary": "catalog:",
-    "react-router-dom": "catalog:",
-    "react-window": "catalog:",
-    "tailwindcss": "catalog:",
-    "zod": "catalog:"
+    "@ticket/shared-types": "workspace:*",
+    "class-variance-authority": "catalog:ui",
+    "clsx": "catalog:ui",
+    "lucide-react": "catalog:ui",
+    "next-themes": "catalog:ui",
+    "react": "catalog:frontend",
+    "react-dom": "catalog:frontend",
+    "react-error-boundary": "catalog:frontend",
+    "react-router-dom": "catalog:frontend",
+    "react-virtualized-auto-sizer": "catalog:ui",
+    "react-window": "catalog:ui",
+    "sonner": "catalog:ui",
+    "tailwind-merge": "catalog:ui",
+    "tailwindcss": "catalog:ui",
+    "zod": "catalog:frontend",
+    "zustand": "catalog:frontend"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:",
-    "vite-tsconfig-paths": "catalog:"
+    "@types/node": "catalog:types",
+    "@types/react": "catalog:types",
+    "@types/react-dom": "catalog:types",
+    "@types/react-window": "catalog:types",
+    "@vitejs/plugin-react": "catalog:tooling",
+    "typescript": "catalog:tooling",
+    "vite": "catalog:tooling",
+    "vite-tsconfig-paths": "catalog:tooling"
   }
 }
