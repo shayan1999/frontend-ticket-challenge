@@ -1,6 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import "@/app/styles/globals.css"
+import "./app/styles/global.css"
 import { configureServices } from "@ticket/services"
 import { AppProviders } from "@/app/providers/index.tsx"
 import { AppRouter } from "@/app/router/index.tsx"
