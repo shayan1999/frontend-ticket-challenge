@@ -1,9 +1,9 @@
 import { useLoaderData } from "react-router-dom"
 import { useSeatMapQuery } from "@/features/seat-selection/api/use-seat-map-query"
-import { SeatMapPageLayout } from "@/features/seat-selection/components/seat-selection/seat-map-page-layout"
+import { SeatMapPageLayout } from "@/features/seat-selection/components/seat-map-page-layout"
+import { SeatMapPageLoading } from "@/features/seat-selection/components/seat-map-page-loading"
 import { Card } from "@/shared/components/card"
 import { ErrorMessage } from "@/shared/components/error-message"
-import { Spinner } from "@/shared/components/spinner"
 import { getErrorMessage } from "@/shared/lib/get-error-message"
 
 export function SeatSelectionPage() {
@@ -11,14 +11,10 @@ export function SeatSelectionPage() {
         mapId: string
     }
 
-    const { data, isLoading, isError, error } = useSeatMapQuery(mapId)
+    const { data, isLoading, isFetching, isError, error } = useSeatMapQuery(mapId)
 
-    if (isLoading) {
-        return (
-            <div className="flex min-h-screen items-center justify-center">
-                <Spinner className="size-8" />
-            </div>
-        )
+    if (isLoading || isFetching) {
+        return <SeatMapPageLoading />
     }
 
     if (isError) {
