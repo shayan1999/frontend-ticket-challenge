@@ -3,10 +3,12 @@ import { create } from "zustand"
 
 type SeatMapStore = {
     selectedSeat: SeatCoordinate | null
+    mapId?: string | null
 
     zoom: number
 
     setSelectedSeat(seat: SeatCoordinate | null): void
+    setMapId(mapId: string): void
 
     zoomIn(): void
     zoomOut(): void
@@ -17,6 +19,7 @@ const MAX_ZOOM = 2
 
 export const useSeatMapStore = create<SeatMapStore>((set) => ({
     selectedSeat: null,
+    mapId: null,
 
     zoom: 1,
 
@@ -25,7 +28,9 @@ export const useSeatMapStore = create<SeatMapStore>((set) => ({
             selectedSeat: state.selectedSeat?.x === seat?.x && state.selectedSeat?.y === seat?.y ? null : seat,
         }))
     },
-
+    setMapId: (mapId) => {
+        set({ mapId })
+    },
     zoomIn: () => {
         set((state) => ({
             zoom: Math.min(state.zoom + 0.25, MAX_ZOOM),

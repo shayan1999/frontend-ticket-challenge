@@ -1,9 +1,9 @@
 import * as Dialog from "@radix-ui/react-dialog"
 import { XIcon } from "lucide-react"
 import { type ReactNode, useState } from "react"
-import { useLoaderData } from "react-router-dom"
 import { Button } from "@/shared/components/button"
 import { useConfirmSeatPurchase } from "../../hooks/use-confirm-seat-purchase"
+import { useSeatMapStore } from "../../store/use-seat-map-store"
 
 interface Props {
     trigger: ReactNode
@@ -11,11 +11,9 @@ interface Props {
 
 export function PurchaseConfirmationDialog({ trigger }: Props) {
     const [open, setOpen] = useState(false)
-    const { mapId } = useLoaderData() as {
-        mapId: string
-    }
+    const mapId = useSeatMapStore((state) => state.mapId)
     const { confirmPurchase, isPending, selectedSeat } = useConfirmSeatPurchase({
-        mapId,
+        mapId: mapId ?? "",
         onSuccess: () => setOpen(false),
     })
 
@@ -34,8 +32,8 @@ export function PurchaseConfirmationDialog({ trigger }: Props) {
                         </Dialog.Close>
                     </div>
                     <Dialog.Description className="mt-3 text-muted">
-                        Are you sure you want to purchase the seat at row <b>{selectedSeat?.y ?? 1}</b>, column{" "}
-                        <b>{selectedSeat?.x ?? 1}</b> for <b>$1</b>?
+                        Are you sure you want to purchase the seat at row <b>{selectedSeat?.y ? selectedSeat.y + 1 : 1}</b>,
+                        column <b>{selectedSeat?.x ? selectedSeat.x + 1 : 1}</b> for <b>$1</b>?
                     </Dialog.Description>
                     <div className="mt-6 flex justify-end gap-3">
                         <Dialog.Close asChild>
