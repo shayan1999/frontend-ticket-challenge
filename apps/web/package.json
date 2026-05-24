@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "catalog:ui",
@@ -31,13 +32,18 @@
     "zustand": "catalog:frontend"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "catalog:tests",
+    "@testing-library/react": "catalog:tests",
+    "@testing-library/user-event": "catalog:tests",
     "@types/node": "catalog:types",
     "@types/react": "catalog:types",
     "@types/react-dom": "catalog:types",
     "@types/react-window": "catalog:types",
     "@vitejs/plugin-react": "catalog:tooling",
+    "jsdom": "catalog:tests",
     "typescript": "catalog:tooling",
     "vite": "catalog:tooling",
-    "vite-tsconfig-paths": "catalog:tooling"
+    "vite-tsconfig-paths": "catalog:tooling",
+    "vitest": "catalog:tests"
   }
 }
