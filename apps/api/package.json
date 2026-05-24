@@ -4,10 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@ticket/shared-types": "workspace:*",
+    "cors": "catalog:backend",
+    "express": "catalog:backend"
+  },
+  "devDependencies": {
+    "@types/cors": "catalog:types",
+    "@types/express": "catalog:types",
+    "@types/node": "catalog:types",
+    "tsx": "catalog:tooling",
+    "typescript": "catalog:tooling"
+  }
 }

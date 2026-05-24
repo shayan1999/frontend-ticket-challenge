@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+    --background: 255 255 255;
+    --background-foreground: 24 24 27;
+
+    --foreground: 24 24 27;
+    --foreground-background: 255 255 255;
+
+    --paper: 250 250 250;
+
+    --primary: 102 0 255;
+    --primary-foreground: 255 255 255;
+    --primary-background: 237 233 254;
+
+    --secondary: 244 244 245;
+    --secondary-foreground: 24 24 27;
+    --secondary-background: 250 250 250;
+
+    --border: 228 228 231;
+    --muted: 113 113 122;
+
+    --success: 34 197 94;
+    --success-foreground: 255 255 255;
+
+    --warning: 245 158 11;
+    --warning-foreground: 24 24 27;
+
+    --danger: 239 68 68;
+    --danger-foreground: 255 255 255;
+}
+
+.dark {
+    --background: 24 24 27;
+    --background-foreground: 244 244 245;
+
+    --foreground: 244 244 245;
+    --foreground-background: 24 24 27;
+
+    --paper: 39 39 42;
+
+    --primary: 96 148 251;
+    --primary-foreground: 255 255 255;
+    --primary-background: 30 41 59;
+
+    --secondary: 39 39 42;
+    --secondary-foreground: 244 244 245;
+    --secondary-background: 63 63 70;
+
+    --border: 63 63 70;
+    --muted: 161 161 170;
+
+    --success: 74 222 128;
+    --success-foreground: 20 20 20;
+
+    --warning: 251 191 36;
+    --warning-foreground: 20 20 20;
+
+    --danger: 248 113 113;
+    --danger-foreground: 255 255 255;
+}
+
+@theme {
+    --color-background: rgb(var(--background));
+    --color-background-foreground: rgb(var(--background-foreground));
+
+    --color-foreground: rgb(var(--foreground));
+    --color-foreground-background: rgb(var(--foreground-background));
+
+    --color-paper: rgb(var(--paper));
+
+    --color-primary: rgb(var(--primary));
+    --color-primary-foreground: rgb(var(--primary-foreground));
+    --color-primary-background: rgb(var(--primary-background));
+
+    --color-secondary: rgb(var(--secondary));
+    --color-secondary-foreground: rgb(var(--secondary-foreground));
+    --color-secondary-background: rgb(var(--secondary-background));
+
+    --color-border: rgb(var(--border));
+    --color-muted: rgb(var(--muted));
+
+    --color-success: rgb(var(--success));
+    --color-success-foreground: rgb(var(--success-foreground));
+
+    --color-warning: rgb(var(--warning));
+    --color-warning-foreground: rgb(var(--warning-foreground));
+
+    --color-danger: rgb(var(--danger));
+    --color-danger-foreground: rgb(var(--danger-foreground));
+}
+
+body {
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+}
