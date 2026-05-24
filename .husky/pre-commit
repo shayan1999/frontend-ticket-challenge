@@ -1,1 +1,6 @@
-pnpm exec lint-staged
+pnpm exec lint-staged || exit 1
+
+if git diff --cached --name-only | grep -q '^apps/web/'; then
+  echo "Detected staged changes in apps/web - running @ticket/web tests..."
+  pnpm --filter @ticket/web test -- --run || exit 1
+fi
