@@ -1,18 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 import { SeatSelectionPage } from "@/pages/seat-selection"
-import { seatMapLoader } from "@/pages/seat-selection/loader"
-import { TicketSuccessPage } from "@/pages/ticket-success"
+import { TicketPage } from "@/pages/ticket-page"
 
 const router = createBrowserRouter([
     {
         path: "/",
-        loader: seatMapLoader,
         element: <SeatSelectionPage />,
     },
     {
         path: "/ticket/:ticketId",
-        element: <TicketSuccessPage />,
+        element: <TicketPage />,
     },
 ])
 

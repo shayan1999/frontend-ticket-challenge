@@ -1,19 +1,14 @@
-import { useLoaderData } from "react-router-dom"
-import { useSeatMapQuery } from "@/features/seat-selection/api/use-seat-map-query"
 import { SeatMapPageLayout } from "@/features/seat-selection/components/seat-map-page-layout"
 import { SeatMapPageLoading } from "@/features/seat-selection/components/seat-map-page-loading"
+import { useGetRandomMap } from "@/features/seat-selection/hooks/use-get-random-map"
 import { Card } from "@/shared/components/card"
 import { ErrorMessage } from "@/shared/components/error-message"
 import { getErrorMessage } from "@/shared/lib/get-error-message"
 
 export function SeatSelectionPage() {
-    const { mapId } = useLoaderData() as {
-        mapId: string
-    }
+    const { mapData, isLoading, isError, error } = useGetRandomMap()
 
-    const { data, isLoading, isFetching, isError, error } = useSeatMapQuery(mapId)
-
-    if (isLoading || isFetching) {
+    if (isLoading) {
         return <SeatMapPageLoading />
     }
 
@@ -27,7 +22,7 @@ export function SeatSelectionPage() {
         )
     }
 
-    if (!data) {
+    if (!mapData) {
         return (
             <div className="p-4">
                 <Card>
@@ -37,5 +32,5 @@ export function SeatSelectionPage() {
         )
     }
 
-    return <SeatMapPageLayout seats={data} />
+    return <SeatMapPageLayout seats={mapData} />
 }

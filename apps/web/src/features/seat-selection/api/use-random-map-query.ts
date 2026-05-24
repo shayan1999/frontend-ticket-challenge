@@ -4,7 +4,7 @@ import { mapService } from "@ticket/services"
 
 import { queryKeys } from "@/shared/api/query-keys"
 
-export function useRandomMapQuery() {
+export function useRandomMapQuery(enabled?: boolean) {
     return useQuery({
         queryKey: queryKeys.maps,
         queryFn: async () => {
@@ -14,5 +14,6 @@ export function useRandomMapQuery() {
 
             return maps[randomIndex]
         },
+        enabled,
     })
 }

@@ -45,7 +45,12 @@ export function useConfirmSeatPurchase({ mapId, onSuccess }: UseConfirmSeatPurch
 
             onSuccess?.()
 
-            navigate(`/ticket/${response.ticketId}`)
+            navigate(`/ticket/${response.ticketId}`, {
+                state: {
+                    seat: selectedSeat,
+                    mapId,
+                },
+            })
         } catch (error) {
             toast.error(getErrorMessage(error))
         }
